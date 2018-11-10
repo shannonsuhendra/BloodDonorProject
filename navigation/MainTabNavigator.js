@@ -77,5 +77,10 @@ export default createBottomTabNavigator({
   WhyStack,
   RequirementsStack,
   UpdateStack,
-});
+},{
+  tabBarOptions:{
+    activeTintColor: '#ff0000'
+  }
+}
+);
 
