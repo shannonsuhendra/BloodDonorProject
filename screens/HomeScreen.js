@@ -26,9 +26,6 @@ export default class HomeScreen extends React.Component {
             <Text h4 style ={styles.titleText}>
               Liquid Life
             </Text>
-            <Text h5 style ={styles.subtitleText}>
-              we share because we care
-            </Text>
             <Image
               source={
                 require('../assets/images/heart.png')
@@ -42,6 +39,9 @@ export default class HomeScreen extends React.Component {
               style={styles.picture}
             />
           </View>
+          <Text style={styles.NextEvent}>
+              Next Event:
+          </Text>
           <List containerStyle={styles.List} > 
               <ListItem
                 title="4 November 2018"
@@ -71,6 +71,16 @@ export default class HomeScreen extends React.Component {
                 containerStyle={styles.ListItem}
               />
           </List>
+          
+          <View style={styles.Calendar}>
+              <Button 
+                onPress={this._CalendarPress} 
+                style={styles.CalendarLink}
+                title="Upcoming Events!"
+                backgroundColor="#ff0000"
+                rightIcon={{name: 'caret-right', type: 'font-awesome'}}
+              />
+          </View>
 
           <View style={styles.AboutUs}>
               <Button 
@@ -85,7 +95,13 @@ export default class HomeScreen extends React.Component {
     );
   }
 
-  
+  _CalendarPress = () => {
+    //WebBrowser.openBrowserAsync(
+    //  'https://docs.expo.io/versions/latest/guides/up-and-running.html#can-t-see-your-changes'
+    this.props.navigation.navigate('Calendar')
+    
+  };
+
   _NextPress = () => {
     //WebBrowser.openBrowserAsync(
     //  'https://docs.expo.io/versions/latest/guides/up-and-running.html#can-t-see-your-changes'
@@ -101,11 +117,6 @@ const styles = StyleSheet.create({
     fontFamily: 'MarkerFelt-Thin',
     fontSize: 40
   },
-  subtitleText:{
-    fontSize:18,
-    fontFamily: 'Menlo-Bold'
-  },
-  
   AboutUs:{
     marginTop: 15,
   },
@@ -141,5 +152,12 @@ const styles = StyleSheet.create({
     width: 600,
     height: 200
   },
-  
+  Calendar:{
+    marginTop:15
+  },
+  NextEvent:{
+    fontSize:25,
+    marginLeft:20,
+    textAlign: 'left'
+  }
 });

@@ -6,6 +6,7 @@ import {
   StyleSheet,
 } from 'react-native';
 import { List, ListItem, Text, colors, Icon } from 'react-native-elements';
+import Colors from '../constants/Colors';
 
 const ageData = [
   {
@@ -203,7 +204,7 @@ export default class RequirementsScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: Colors.backgroundColor,
   },
   welcomeContainer: {
     alignItems: 'center',
@@ -224,12 +225,13 @@ const styles = StyleSheet.create({
   List:{
     marginTop:0,
     marginBottom:20,
-    borderColor:'white',
+    borderColor:Colors.backgroundColor,
+    backgroundColor: Colors.backgroundColor,
   },
   ListItem:{
     marginTop:0,
     marginLeft:20,
-    borderBottomColor:'white',
+    borderBottomColor:Colors.backgroundColor,
     paddingBottom:0,
     paddingTop:5
   },

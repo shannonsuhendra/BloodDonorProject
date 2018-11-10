@@ -5,6 +5,7 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import AboutUsScreen from '../screens/AboutUsScreen'
+import CalendarScreen from '../screens/CalendarScreen'
 import WhyScreen from '../screens/WhyScreen';
 import RequirementsScreen from '../screens/RequirementsScreen';
 import UpdateScreen from '../screens/UpdateScreen';
@@ -14,6 +15,7 @@ import UpdateScreen from '../screens/UpdateScreen';
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
   AboutUs: AboutUsScreen,
+  Calendar: CalendarScreen
 });
 
 HomeStack.navigationOptions = {

@@ -2,6 +2,7 @@ import React from 'react';
 import { ScrollView, StyleSheet, Text, View, Image } from 'react-native';
 import SegmentedControlTab from 'react-native-segmented-control-tab';
 import {List, ListItem} from 'react-native-elements';
+import Colors from '../constants/Colors';
 
 const benefitsInfo = "Donating blood doesn't just benefit recipients. There are health benefits for donors too aside from helping others."
 
@@ -134,7 +135,7 @@ export default class WhyScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: Colors.backgroundColor,
   },
   welcomeContainer: {
     alignItems: 'center',
@@ -142,10 +143,11 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   List:{
-    borderColor:'white'
+    borderColor:Colors.backgroundColor,
+    backgroundColor: Colors.backgroundColor
   },
   ListItem:{
-    borderBottomColor: '#fff',
+    borderBottomColor: Colors.backgroundColor,
   },
   ListItemTitle:{
     fontSize: 18
