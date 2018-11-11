@@ -10,6 +10,7 @@ import {
 import SliderEntry from '../components/SliderEntry';
 import {sliderWidth, itemWidth} from '../styles/SliderEntry.style';
 import {Text, Card, ListItem, List, Button} from 'react-native-elements';
+import Colors from '../constants/Colors';
 
 import { MonoText } from '../components/StyledText';
 
@@ -114,7 +115,7 @@ const styles = StyleSheet.create({
   titleText:{
     fontWeight: 'bold',
     color:"#ff0000",
-    fontFamily: 'MarkerFelt-Thin',
+    fontFamily: Platform.OS === 'ios' ? 'MarkerFelt-Thin' : ,
     fontSize: 40
   },
   AboutUs:{
@@ -122,7 +123,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: Colors.backgroundColor,
   },
   contentContainer: {
     paddingTop: 30,
@@ -141,16 +142,18 @@ const styles = StyleSheet.create({
   },
   List:{
     marginLeft:20,
-    marginRight:20
+    marginRight:20,
+    backgroundColor: Colors.backgroundColor
   },
   ListItemTitle:{
     fontSize:20,
     color: 'black',
   },
   picture:{
+    marginTop: 20,
     resizeMode: 'contain',
-    width: 600,
-    height: 200
+    width: 500,
+    height: 150
   },
   Calendar:{
     marginTop:15

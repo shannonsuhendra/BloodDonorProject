@@ -24,10 +24,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.suhendra.liquidlife"
     },
     "android":{
       "package": "com.suhendra.liquidlife"
     }
+    
   }
 }

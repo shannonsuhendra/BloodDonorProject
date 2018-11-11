@@ -14,6 +14,9 @@ import {sliderWidth, itemWidth} from '../styles/SliderEntry.style';
 import {Text, Card, ListItem, List} from 'react-native-elements';
 
 import { MonoText } from '../components/StyledText';
+import Colors from '../constants/Colors';
+import { back } from 'react-native/Libraries/Animated/src/Easing';
+import { Col } from 'react-native-table-component';
 
 export const CAROUSEL = [
   { image: require('../assets/images/img1.png')},
@@ -24,7 +27,11 @@ export const CAROUSEL = [
 
 export default class NextEventScreen extends React.Component {
   static navigationOptions = {
-    title: 'About Us'
+    title: 'About Us',
+    headerTintColor: 'red',
+    headerTitleStyle: {
+      color: 'black'
+  }
   };
 
   _renderItem({item, index}){
@@ -53,7 +60,7 @@ export default class NextEventScreen extends React.Component {
             />
           </View>
 
-          <Card style={styles.AboutUs}>
+          <View style={styles.AboutUs}>
             <Text style={styles.AboutUsTitle}>
               About Us:
             </Text>
@@ -64,9 +71,9 @@ export default class NextEventScreen extends React.Component {
             To improve and promote these events, we eventually work with Indahnya Berbagi. 
             
             </Text>
-          </Card>
+          </View>
 
-          <Card style={styles.Mission}>
+          <View style={styles.Mission}>
             <Text style={styles.MissionTitle}>
               Mission:
             </Text>
@@ -76,7 +83,7 @@ export default class NextEventScreen extends React.Component {
             we work with the Red Cross to collect blood packs from 
             blood donors to meet demand during crisis.
             </Text>
-          </Card>
+          </View>
 
           <View style={styles.Info}>
             <Image 
@@ -120,7 +127,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: Colors.backgroundColor,
   },
   welcomeContainer: {
     alignItems: 'center',
@@ -134,10 +141,11 @@ const styles = StyleSheet.create({
     marginTop: 15
   },
   ListItemContact:{
-    borderBottomColor:'white'
+    borderBottomColor:Colors.backgroundColor,
+    backgroundColor:Colors.backgroundColor
   },
   ListContact:{
-    borderColor:'white'
+    borderColor:Colors.backgroundColor
   },
   Info:{
     flexDirection:'row',
@@ -153,7 +161,15 @@ const styles = StyleSheet.create({
   },
   Contact:{
     flex:0.7,
-    paddingLeft:20
+    paddingLeft:20,
+  },
+  AboutUs:{
+    backgroundColor:'#ffc6c6',
+    marginLeft:20,
+    marginRight:20,
+    borderColor:'black',
+    borderWidth:0.5,
+    padding:10
   },
   AboutUsTitle:{
     fontSize:16,
@@ -161,6 +177,15 @@ const styles = StyleSheet.create({
   },
   AboutUsText:{
     fontSize:15,
+  },
+  Mission:{
+    backgroundColor:'#ffc6c6',
+    marginLeft:20,
+    marginRight:20,
+    marginTop:20,
+    borderColor:'black',
+    borderWidth:0.5,
+    padding:10
   },
   MissionTitle:{
     fontSize:16,
