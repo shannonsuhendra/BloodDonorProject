@@ -11,10 +11,26 @@ import SliderEntry from '../components/SliderEntry';
 import {sliderWidth, itemWidth} from '../styles/SliderEntry.style';
 import {Text, Card, ListItem, List, Button} from 'react-native-elements';
 import Colors from '../constants/Colors';
-
+import i18n from 'i18n-js'
+import {Localization} from 'expo-localization'
 import { MonoText } from '../components/StyledText';
 
+const en ={
+  nextEvent: 'Next Event:',
+  upcomingEvents: 'Upcoming Events!',
+  learn: 'Learn More About Us!'
+}
 
+const id ={
+  nextEvent: 'Acara Selanjutnya:',
+  upcomingEvents: 'Acara Mendatang!',
+  learn: 'pelajari lebih lanjut tentang kami'
+}
+
+i18n.fallbacks = true;
+i18n.translations = {id, en};
+i18n.locale = "en-US";
+//i18n.locale = "id-ID"
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
     header: null,
@@ -41,7 +57,7 @@ export default class HomeScreen extends React.Component {
             />
           </View>
           <Text style={styles.NextEvent}>
-              Next Event:
+              {i18n.t('nextEvent')}
           </Text>
           <List containerStyle={styles.List} > 
               <ListItem
@@ -92,8 +108,25 @@ export default class HomeScreen extends React.Component {
                 rightIcon={{name: 'caret-right', type: 'font-awesome'}}
               />
           </View>
+
+          <View style={styles.Language}>
+              <Button 
+                onPress={this._LanguagePress} 
+                style={styles.LanguageLink}
+                title="Change to Bahasa Indonesia"
+                backgroundColor="#ff0000"
+                rightIcon={{name: 'caret-right', type: 'font-awesome'}}
+              />
+          </View>
+
+          
         </ScrollView>
     );
+  }
+
+  _LanguagePress = () => {
+    i18n.locale = "id-ID"
+    console.log("language")
   }
 
   _CalendarPress = () => {
