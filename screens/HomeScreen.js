@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
   titleText:{
     fontWeight: 'bold',
     color:"#ff0000",
-    fontFamily: Platform.OS === 'ios' ? 'MarkerFelt-Thin' : ,
+    fontFamily: Platform.OS === 'ios' ? 'MarkerFelt-Thin' : 'normal',
     fontSize: 40
   },
   AboutUs:{
