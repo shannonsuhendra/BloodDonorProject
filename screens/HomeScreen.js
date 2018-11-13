@@ -4,32 +4,28 @@ import {
   Platform,
   ScrollView,
   StyleSheet,
-  TouchableOpacity,
   View,
 } from 'react-native';
-import SliderEntry from '../components/SliderEntry';
-import {sliderWidth, itemWidth} from '../styles/SliderEntry.style';
-import {Text, Card, ListItem, List, Button} from 'react-native-elements';
+import {Text, ListItem, List, Button} from 'react-native-elements';
 import Colors from '../constants/Colors';
-import i18n from 'i18n-js'
-import {Localization} from 'expo-localization'
-import { MonoText } from '../components/StyledText';
+//import i18n from 'i18n-js'
+//import {Localization} from 'expo-localization'
 
-const en ={
-  nextEvent: 'Next Event:',
-  upcomingEvents: 'Upcoming Events!',
-  learn: 'Learn More About Us!'
-}
+//const en ={
+//  nextEvent: 'Next Event:',
+//  upcomingEvents: 'Upcoming Events!',
+//  learn: 'Learn More About Us!'
+//}
 
-const id ={
-  nextEvent: 'Acara Selanjutnya:',
-  upcomingEvents: 'Acara Mendatang!',
-  learn: 'pelajari lebih lanjut tentang kami'
-}
+//const id ={
+//  nextEvent: 'Acara Selanjutnya:',
+//  upcomingEvents: 'Acara Mendatang!',
+//  learn: 'pelajari lebih lanjut tentang kami'
+//}
 
-i18n.fallbacks = true;
-i18n.translations = {id, en};
-i18n.locale = "en-US";
+//i18n.fallbacks = true;
+//i18n.translations = {id, en};
+//i18n.locale = "en-US";
 //i18n.locale = "id-ID"
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -57,11 +53,11 @@ export default class HomeScreen extends React.Component {
             />
           </View>
           <Text style={styles.NextEvent}>
-              {i18n.t('nextEvent')}
+              Next Event:
           </Text>
           <List containerStyle={styles.List} > 
               <ListItem
-                title="4 November 2018"
+                title="17 February 2019"
                 hideChevron={true}
                 leftIcon={{name:'event', type: 'MaterialIcons', color: 'red'}}
                 containerStyle={styles.ListItem}
@@ -107,27 +103,15 @@ export default class HomeScreen extends React.Component {
                 backgroundColor="#ff0000"
                 rightIcon={{name: 'caret-right', type: 'font-awesome'}}
               />
-          </View>
-
-          <View style={styles.Language}>
-              <Button 
-                onPress={this._LanguagePress} 
-                style={styles.LanguageLink}
-                title="Change to Bahasa Indonesia"
-                backgroundColor="#ff0000"
-                rightIcon={{name: 'caret-right', type: 'font-awesome'}}
-              />
-          </View>
-
-          
+          </View>          
         </ScrollView>
     );
   }
 
-  _LanguagePress = () => {
-    i18n.locale = "id-ID"
-    console.log("language")
-  }
+  //_LanguagePress = () => {
+  //  i18n.locale = "id-ID"
+  //  console.log("language")
+  //}
 
   _CalendarPress = () => {
     //WebBrowser.openBrowserAsync(

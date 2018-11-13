@@ -20,20 +20,25 @@ import { Col } from 'react-native-table-component';
 
 const data = [
     {
-        'date': 18,
-        'month': 'Dec',
-        'detail': 'PIK'
+        'date': 17,
+        'month': 'Feb',
+        'detail': 'Taman Grisenda Blok E2/2 PIK'
     },
     {
-        'date': 20,
-        'month': 'Jan',
-        'detail': 'PIK'
+        'date': 28,
+        'month': 'Apr',
+        'detail': 'Taman Grisenda Blok E2/2 PIK'
     },
     {
-        'date': 2,
-        'month': 'March',
-        'detail': 'PIK'
+        'date': 4,
+        'month': 'Aug',
+        'detail': 'Taman Grisenda Blok E2/2 PIK'
     },
+    {
+      'date': 3,
+      'month': 'Nov',
+      'detail': 'Taman Grisenda Blok E2/2 PIK'
+  },
 ]
 export default class CalendarScreen extends React.Component {
   static navigationOptions = {

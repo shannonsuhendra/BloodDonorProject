@@ -126,7 +126,7 @@ export default class RequirementsScreen extends React.Component {
               hideChevron={true}
               containerStyle={styles.ListItem}
               titleStyle={styles.ListItemTitle}
-              titleNumberOfLines={2}
+              titleNumberOfLines={4}
               leftIcon={{name: 'asterisk', type: 'foundation', color: 'black', size:10}}
             />
            ))
@@ -147,7 +147,7 @@ export default class RequirementsScreen extends React.Component {
               hideChevron={true}
               containerStyle={styles.ListItem}
               titleStyle={styles.ListItemTitle}
-              titleNumberOfLines={3}
+              titleNumberOfLines={5}
               leftIcon={{name: 'asterisk', type: 'foundation', color: 'black', size:10}}
             />
            ))
