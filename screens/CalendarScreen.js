@@ -52,6 +52,9 @@ export default class CalendarScreen extends React.Component {
   render() {
     return (
       <ScrollView style={styles.container}>
+        <Text style={styles.year}>
+          2019
+        </Text>
         {data.map((item, index) => (
             <CalendarItem
               date={item.date}
@@ -68,7 +71,11 @@ export default class CalendarScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  
+  year:{
+    textAlign: 'center',
+    fontSize:30,
+    marginTop: 20
+  },
   container: {
     flex: 1,
     backgroundColor: Colors.backgroundColor,
