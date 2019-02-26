@@ -21,11 +21,11 @@ import { Col } from 'react-native-table-component';
 export const CAROUSEL = [
   { image: require('../assets/images/img1.png')},
   { image: require('../assets/images/img2.jpg')},
-  { image: require('../assets/images/img3.png')},
+  //{ image: require('../assets/images/img3.png')},
   { image: require('../assets/images/img4.png')},
 ]
 
-export default class NextEventScreen extends React.Component {
+export default class AboutUsScreen extends React.Component {
   static navigationOptions = {
     title: 'About Us',
     headerTintColor: 'red',
