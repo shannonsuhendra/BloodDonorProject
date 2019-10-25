@@ -57,7 +57,7 @@ export default class HomeScreen extends React.Component {
           </Text>
           <List containerStyle={styles.List} > 
               <ListItem
-                title="4 Aug 2019"
+                title="3 Nov 2019"
                 hideChevron={true}
                 leftIcon={{name:'event', type: 'MaterialIcons', color: 'red'}}
                 containerStyle={styles.ListItem}
