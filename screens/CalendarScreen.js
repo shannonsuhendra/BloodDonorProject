@@ -20,11 +20,6 @@ import { Col } from 'react-native-table-component';
 
 const data = [
     {
-        'date': 4,
-        'month': 'Aug',
-        'detail': 'Taman Grisenda Blok E2/2 PIK'
-    },
-    {
       'date': 3,
       'month': 'Nov',
       'detail': 'Taman Grisenda Blok E2/2 PIK'
